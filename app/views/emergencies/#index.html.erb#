@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>HARVEY S.O.S </h1><i class="em-sos"></i>
+
+<p class="blurb">There are requests for help all over facebook, instagram, and twitter. Officials have been bombarded by relief calls and are not able to help everyone. The brave and noble citizens of Houston are taking things into their own hand by rescuing people in boats, trucks, or whatever else they can do to help. This is an effort to help keep things organized. Add any known emergencies and share this with others.</p>
+
+
+
+<% @emergencies.each do |emergency| %>
+  <div class="emergency-card">
+    <div class="em"><span class="field-name">Name:</span> <%= emergency.first_name %> <%= emergency.last_name %></div><br>
+    <div class="em"><span class="field-name">Phone:</span> <%= emergency.phone %></div><br>
+    <div class="em"><span class="field-name">Location:</span> <%= emergency.location %></div><br>
+    <div class="em"><span class="field-name">No. of Adults:</span> <%= emergency.number_of_adults %></div><br>
+    <div class="em"><span class="field-name">No. of Children:</span> <%= emergency.number_of_children %></div><br>
+    <div class="em"><span class="field-name">No. of Pets:</span> <%= emergency.number_of_pets %></div><br>
+    <div class="em"><span class="field-name">Notes:</span> <%= emergency.notes %></div><br>
+    <br>
+    <div class="em"><%= link_to 'Edit', edit_emergency_path(emergency) %></div>
+  </div>
+  <br>
+<% end %>
+
+
+  <br>
+  
+  <%= link_to 'New Emergency', new_emergency_path %><br>
+  <hr>
+
+<h3>Below are a list of emergency numbers:</h2>
+
+<div class="relief-num"><strong>U.S. Coast Guard #1: </strong><a href="tel:2814644851">281-464-4851</a></div>
+<div class="relief-num"><strong>U.S. Coast Guard #1: </strong><a href="tel:2814644852">281-464-4852</a></div>
+<div class="relief-num"><strong>U.S. Coast Guard #1: </strong><a href="tel:2814644853">281-464-4853</a></div>
+<div class="relief-num"><strong>U.S. Coast Guard #1: </strong><a href="tel:2814644854">281-464-4854</a></div>
+<div class="relief-num"><strong>U.S. Coast Guard #1: </strong><a href="tel:2814644855">281-464-4855</a></div>
+<br>
+<div class="relief-num"><strong>Houston Police Non-Emergency: </strong><a href="tel:7138843131">713-884-3131</a></div>
+<br>
+<div class="relief-num"><strong>City of Houston: </strong><a href="tel:311">311</a></div>
+<div class="relief-num"><strong>Texas United Way Helpline: </strong><a href="tel:211">211</a></div>
+
