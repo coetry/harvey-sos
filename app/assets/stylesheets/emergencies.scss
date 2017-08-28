@@ -8,12 +8,14 @@ h1 {
     color: indianred;
 }
 
-/*.seven-col-container {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    text-align: left;
-    grid-gap: 10px;
-}*/
+.blurb {
+    font-size: 0.75em;
+}
+
+.relief-num {
+    color: #04B45F;
+}
+
 
 .emergency-card {
     display: grid;

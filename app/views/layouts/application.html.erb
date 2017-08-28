@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HarveySos</title>
+    <title>HarveySOS</title>
+
+    <%= favicon_link_tag 'favicon.png' %>
+
+	 <!-- Twitter Card data -->
+    <meta name="twitter:site" content="@coetry">
+    <meta name="twitter:title" content="Harvey SOS">
+    <meta name="twitter:description" content="List your emergency so people can find you!">
+    <meta name="twitter:creator" content="@coetry">
+    <meta name="twitter:image:src" content="<%= asset_path('sos.jpg') %>">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Harvey SOS" />
+    <meta property="og:url" content="http://www.harveysos.herokuapp.com/" />
+    <meta property="og:image" content="<%= asset_path('sos.jpg') %>" />
+    <meta property="og:description" content="List your emergency so people can find you!" />
+    <meta property="og:site_name" content="Harvey SOS" />
+    
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
   </head>
 
   <body>
