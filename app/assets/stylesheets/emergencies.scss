@@ -18,8 +18,6 @@ h1 {
 
 
 .emergency-card {
-    display: grid;
-    grid-template-columns: 1fr;
     border: 3px solid indianred;
     border-radius: 3px;
     padding: 10px;
@@ -36,31 +34,3 @@ h1 {
     padding: 10px;
 }
 
-#fname {
-    grid-column: 1 / 2;
-}
-
-#lname {
-    grid-column: 2 / 3;
-}
-
-#location {
-    grid-column: 3 / 4
-;
-}
-
-#num-adults {
-    grid-column: 4 / 5;
-}
-
-#num-children {
-    grid-column: 5 / 6;
-}
-
-#num-pets {
-    grid-column: 6 / 7;
-}
-
-#notes {
-    grid-column: 7 / 8;
-}
