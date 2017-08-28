@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>HARVEY S.O.S</h1>
+
+
+<div class="seven-col-container">
+  <% @emergencies.each do |emergency| %>
+  <div class="emergency-card">
+    <div class="em"><span class="field-name">Name:</span> <%= emergency.first_name %> <%= emergency.last_name %></div><br>
+    <div class="em"><span class="field-name">Location:</span> <%= emergency.location %></div><br>
+    <div class="em"><span class="field-name">No. of Adults:</span> <%= emergency.number_of_adults %></div><br>
+    <div class="em"><span class="field-name">No. of Children:</span> <%= emergency.number_of_children %></div><br>
+    <div class="em"><span class="field-name">No. of Pets:</span> <%= emergency.number_of_pets %></div><br>
+    <div class="em"><span class="field-name">Notes:</span> <%= emergency.notes %></div><br>
+    <br>
+    <div class="em"><%= link_to 'Edit', edit_emergency_path(emergency) %></div>
+
+<% end %>
+</div>
+
+  <br>
+  
+<%= link_to 'New Emergency', new_emergency_path %>

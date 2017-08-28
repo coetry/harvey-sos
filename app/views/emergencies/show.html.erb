@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @emergency.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @emergency.last_name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @emergency.location %>
+</p>
+
+<p>
+  <strong>Number of adults:</strong>
+  <%= @emergency.number_of_adults %>
+</p>
+
+<p>
+  <strong>Number of children:</strong>
+  <%= @emergency.number_of_children %>
+</p>
+
+<p>
+  <strong>Number of pets:</strong>
+  <%= @emergency.number_of_pets %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @emergency.notes %>
+</p>
+
+<%= link_to 'Edit', edit_emergency_path(@emergency) %> |
+<%= link_to 'Back', emergencies_path %>

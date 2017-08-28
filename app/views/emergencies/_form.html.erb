@@ -1,0 +1,52 @@
+<%= form_with(model: emergency, local: true) do |form| %>
+  <% if emergency.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(emergency.errors.count, "error") %> prohibited this emergency from being saved:</h2>
+
+      <ul>
+      <% emergency.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, id: :emergency_first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, id: :emergency_last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location, id: :emergency_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_of_adults %>
+    <%= form.number_field :number_of_adults, id: :emergency_number_of_adults %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_of_children %>
+    <%= form.number_field :number_of_children, id: :emergency_number_of_children %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_of_pets %>
+    <%= form.number_field :number_of_pets, id: :emergency_number_of_pets %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_area :notes, id: :emergency_notes %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
