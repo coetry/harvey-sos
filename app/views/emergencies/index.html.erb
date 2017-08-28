@@ -6,10 +6,10 @@
 
 
 
-  <% @emergencies.each do |emergency| %>
+<% @emergencies.each do |emergency| %>
   <div class="emergency-card">
     <div class="em"><span class="field-name">Name:</span> <%= emergency.first_name %> <%= emergency.last_name %></div><br>
-    <div class="em"><span class="field-name">Phone:</span> <%= emergency.phone %><div><br>
+    <div class="em"><span class="field-name">Phone:</span> <%= emergency.phone %></div><br>
     <div class="em"><span class="field-name">Location:</span> <%= emergency.location %></div><br>
     <div class="em"><span class="field-name">No. of Adults:</span> <%= emergency.number_of_adults %></div><br>
     <div class="em"><span class="field-name">No. of Children:</span> <%= emergency.number_of_children %></div><br>
@@ -17,7 +17,7 @@
     <div class="em"><span class="field-name">Notes:</span> <%= emergency.notes %></div><br>
     <br>
     <div class="em"><%= link_to 'Edit', edit_emergency_path(emergency) %></div>
-</div>
+ </div>
 <% end %>
 
 
