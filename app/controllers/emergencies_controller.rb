@@ -4,7 +4,7 @@ class EmergenciesController < ApplicationController
   # GET /emergencies
   # GET /emergencies.json
   def index
-    @emergencies = Emergency.all(:order => "created_at DESC")
+    @emergencies = Emergency.all
   end
 
   # GET /emergencies/1
