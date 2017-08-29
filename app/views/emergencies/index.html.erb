@@ -1,10 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>HARVEY S.O.S </h1><i class="em-sos"></i>
+<h1>HARVEY S.O.S </h1>
+
+<%= link_to 'New Emergency', new_emergency_path, id: "new-emergency-btn" %><br>
 
 <p class="blurb">There are requests for help all over facebook, instagram, and twitter. Officials have been bombarded by relief calls and are not able to help everyone. The brave and noble citizens of Houston are taking things into their own hand by rescuing people in boats, trucks, or whatever else they can do to help. This is an effort to help keep things organized. Add any known emergencies and share this with others.</p>
 
-
+<hr>
 
 <% @emergencies.each do |emergency| %>
   <div class="emergency-card">
@@ -21,11 +23,7 @@
   <br>
 <% end %>
 
-
-  <br>
-  
-  <%= link_to 'New Emergency', new_emergency_path %><br>
-  <hr>
+<hr>  
 
 <h3>Below are a list of emergency numbers:</h2>
 
